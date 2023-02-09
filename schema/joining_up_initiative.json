@@ -1,0 +1,156 @@
+{
+  "$id": "https://example.com/joining_up_initiative.schema.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Joining Up Initiative",
+  "type": "object",
+  "required": [],
+  "properties": {
+    "status": {
+      "title": "Status",
+      "type": "string",
+      "propertyOrder": 1,
+      "enum": [
+        "PUBLIC",
+        "PRIVATE",
+        "DISPUTED"
+      ]
+    },
+    "name": {
+      "title": "Name",
+      "description": "Name of the initiative",
+      "propertyOrder": 10,
+      "$ref": "#/definitions/object_with_value_string"
+    },
+    "dates": {
+      "title": "Dates",
+      "type": "object",
+      "propertyOrder": 20,
+      "properties": {
+        "start_date": {
+          "title": "Start date of initiative",
+          "description": "Date when initiative started/will start.",
+          "$ref": "#/definitions/object_with_value_date"
+        }
+      }
+    },
+    "lever": {
+      "title": "Lever",
+      "description": "",
+      "type": "object",
+      "propertyOrder": 30,
+      "properties": {
+        "value": {
+          "title": "Select a value:",
+          "type": "string",
+          "description": "",
+          "enum": [
+            "Administration",
+            "Funding and fiscal powers",
+            "Law and regulation"
+          ]
+        }
+      }
+    },
+    "governance_model": {
+      "title": "Governance model",
+      "description": "",
+      "type": "object",
+      "propertyOrder": 40,
+      "properties": {
+        "value": {
+          "title": "Select a value:",
+          "type": "string",
+          "description": "",
+          "enum": [
+            "Community Leadership",
+            "Constrained Discretion",
+            "Top down"
+          ]
+        }
+      }
+    },
+    "allocation_process": {
+      "title": "Allocation process",
+      "description": "",
+      "type": "object",
+      "propertyOrder": 50,
+      "properties": {
+        "value": {
+          "title": "Select a value:",
+          "type": "string",
+          "description": "",
+          "enum": [
+            "Competitive",
+            "Missing/NA",
+            "Negotiated",
+            "Needs-based",
+            "Universal"
+          ]
+        }
+      }
+    },
+    "departments": {
+      "title": "Departments",
+      "type": "array",
+      "propertyOrder": 60,
+      "items": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "title": "Name",
+            "description": "Name of the department.",
+            "$ref": "#/definitions/object_with_value_string"
+          }
+        }
+      }
+    },
+    "documents": {
+      "title": "Documents",
+      "type": "array",
+      "propertyOrder": 70,
+      "items": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "title": "Title",
+            "description": "Title of related document or case study.",
+            "$ref": "#/definitions/object_with_value_string"
+          },
+          "url": {
+            "title": "URL",
+            "description": "URL of related document or case study.",
+            "$ref": "#/definitions/object_with_value_string"
+          },
+          "notes": {
+            "title": "Notes",
+            "description": "Notes on supporting documents.",
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "object_with_value_string": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "title": "Enter a value:",
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "object_with_value_date": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "title": "Enter a date:",
+          "type": "string",
+          "pattern": "^[0-9][0-9][0-9][0-9]$|^[0-9][0-9][0-9][0-9]-[0-9][0-9]$|^[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]$",
+          "patternHint": "Enter a date in format YYYY, YYYY-MM or YYYY-MM-DD"
+        }
+      }
+    }
+  }
+}
