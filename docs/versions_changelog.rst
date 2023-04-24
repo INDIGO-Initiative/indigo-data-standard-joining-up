@@ -25,6 +25,16 @@ Increments to Major numbers:
 Changelog
 ---------
 
+1.1.0 - 2023-04-25
+~~~~~~~~~~~~~~~~~~
+
+Added policy sector to schema
+Added headline evaluation to schema
+Added other evaluation materials to schema
+Removed documents from schema (replaced by headline and other evaluation materials).
+Normally, this change would result in the version being bumped to v2. However, as there is currently no data entered on the system for the joining up dataset this is a special case and can be ignored. Hence v1.1.0
+
 1.0.0 - 2023-02-22
+~~~~~~~~~~~~~~~~~~
 
 First release.

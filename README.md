@@ -1,6 +1,6 @@
 # indigo-data-standard-joining-up
 
-See https://indigo-data-standard-joining-up.readthedocs.io/en/stable/
+See https://indigo-data-standard-joining-up.readthedocs.io/en/latest/
 
 ## Developers & Working with versions in GitHub / ReadTheDocs
 
@@ -24,5 +24,4 @@ If the branch does not already exist:
 
 Finally,
 * Verify that `https://indigo-data-standard-joining-up.readthedocs.io/en/MAJOR.MINOR/` updates as expected
-* Verify that https://indigo-data-standard-joining-up.readthedocs.io/en/stable/ updates as expected
-
+* Verify that https://indigo-data-standard-joining-up.readthedocs.io/en/latest/ updates as expected

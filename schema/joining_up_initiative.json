@@ -3,7 +3,16 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Joining Up Initiative",
   "type": "object",
-  "required": [],
+  "required": [
+    "name",
+    "dates",
+    "lever",
+    "governance_model",
+    "policy_sector",
+    "departments",
+    "headline_evaluation",
+    "other_evaluation_materials"
+  ],
   "properties": {
     "status": {
       "title": "Status",
@@ -40,7 +49,7 @@
       "propertyOrder": 30,
       "properties": {
         "value": {
-          "title": "Select a value:",
+          "title": "(Value)",
           "type": "string",
           "description": "",
           "enum": [
@@ -58,7 +67,7 @@
       "propertyOrder": 40,
       "properties": {
         "value": {
-          "title": "Select a value:",
+          "title": "(Value)",
           "type": "string",
           "description": "",
           "enum": [
@@ -76,7 +85,7 @@
       "propertyOrder": 50,
       "properties": {
         "value": {
-          "title": "Select a value:",
+          "title": "(Value)",
           "type": "string",
           "description": "",
           "enum": [
@@ -89,10 +98,37 @@
         }
       }
     },
+    "policy_sector": {
+      "title": "Policy sector",
+      "description": "",
+      "type": "array",
+      "propertyOrder": 60,
+      "items": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "title": "(Value)",
+            "type": "string",
+            "description": "",
+            "enum": [
+              "Employment and training",
+              "Child and family welfare",
+              "Health",
+              "Education",
+              "Homelessness",
+              "Criminal justice",
+              "Agriculture and environment",
+              "Poverty reduction",
+              "Cross-cutting"
+            ]
+          }
+        }
+      }
+    },
     "departments": {
       "title": "Departments",
       "type": "array",
-      "propertyOrder": 60,
+      "propertyOrder": 70,
       "items": {
         "type": "object",
         "properties": {
@@ -104,29 +140,22 @@
         }
       }
     },
-    "documents": {
-      "title": "Documents",
+    "headline_evaluation": {
+      "title": "Headline evaluation URL",
       "type": "array",
-      "propertyOrder": 70,
+      "propertyOrder": 80,
+      "minItems": 0,
+      "maxItems": 1,
       "items": {
-        "type": "object",
-        "properties": {
-          "title": {
-            "title": "Title",
-            "description": "Title of related document or case study.",
-            "$ref": "#/definitions/object_with_value_string"
-          },
-          "url": {
-            "title": "URL",
-            "description": "URL of related document or case study.",
-            "$ref": "#/definitions/object_with_value_string"
-          },
-          "notes": {
-            "title": "Notes",
-            "description": "Notes on supporting documents.",
-            "type": "string"
-          }
-        }
+        "$ref": "#/definitions/evaluation_object"
+      }
+    },
+    "other_evaluation_materials": {
+      "title": "Other evaluation materials",
+      "type": "array",
+      "propertyOrder": 90,
+      "items": {
+        "$ref": "#/definitions/evaluation_object"
       }
     }
   },
@@ -135,7 +164,7 @@
       "type": "object",
       "properties": {
         "value": {
-          "title": "Enter a value:",
+          "title": "(Value)",
           "type": "string",
           "minLength": 1
         }
@@ -145,10 +174,26 @@
       "type": "object",
       "properties": {
         "value": {
-          "title": "Enter a date:",
+          "title": "(Value)",
+          "description": "Enter a date in format YYYY, YYYY-MM or YYYY-MM-DD",
           "type": "string",
           "pattern": "^[0-9][0-9][0-9][0-9]$|^[0-9][0-9][0-9][0-9]-[0-9][0-9]$|^[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]$",
           "patternHint": "Enter a date in format YYYY, YYYY-MM or YYYY-MM-DD"
+        }
+      }
+    },
+    "evaluation_object": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "title": "Title",
+          "description": "",
+          "$ref": "#/definitions/object_with_value_string"
+        },
+        "url": {
+          "title": "URL",
+          "description": "",
+          "$ref": "#/definitions/object_with_value_string"
         }
       }
     }
