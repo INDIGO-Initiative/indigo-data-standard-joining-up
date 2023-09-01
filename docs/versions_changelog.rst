@@ -26,6 +26,7 @@ Changelog
 ---------
 
 Removed documents section from docs (this was stopping docs building)
+Added existing "Headline evaluation URL" and "Other evaluation materials" sections to docs
 
 1.1.0 - 2023-04-25
 ~~~~~~~~~~~~~~~~~~
