@@ -22,13 +22,3 @@ This is a list. One Joining Up Initiative can have multiple items of data. One i
    :schema: joining_up_initiative.json
    :path: /properties/departments/items
 
-
-Documents
----------
-
-This is a list of supporting documentation for this Joining Up Initiative. One Joining Up Initiative can have multiple items of data. One item of data is defined as:
-
-
-.. datadictionary::
-   :schema: joining_up_initiative.json
-   :path: /properties/documents/items

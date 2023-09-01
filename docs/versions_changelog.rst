@@ -25,6 +25,8 @@ Increments to Major numbers:
 Changelog
 ---------
 
+Removed documents section from docs (this was stopping docs building)
+
 1.1.0 - 2023-04-25
 ~~~~~~~~~~~~~~~~~~
 
