@@ -23,12 +23,23 @@ This is a list. One Joining Up Initiative can have multiple items of data. One i
    :path: /properties/departments/items
 
 
-Documents
----------
+Headline evaluation URL
+-----------------------
 
-This is a list of supporting documentation for this Joining Up Initiative. One Joining Up Initiative can have multiple items of data. One item of data is defined as:
-
+This is a list. One Joining Up Initiative can have multiple items of data. One item of data is defined as:
 
 .. datadictionary::
    :schema: joining_up_initiative.json
-   :path: /properties/documents/items
+   :path: /properties/headline_evaluation/items
+
+
+
+Other evaluation materials
+--------------------------
+
+This is a list. One Joining Up Initiative can have multiple items of data. One item of data is defined as:
+
+.. datadictionary::
+   :schema: joining_up_initiative.json
+   :path: /properties/other_evaluation_materials/items
+
